@@ -1,0 +1,5 @@
+<section *ngFor='let part of parts'>
+  <h3>{{part["Tytul.Bogaty"]}}</h3>
+  <app-book-level3 [parts]='part["Srodpodtytul.Tresc"]["Srodpodtytul1"]'></app-book-level3>
+  <app-book-paragraph [paragraphs]='part["Srodpodtytul.Tresc"]["Par"]'></app-book-paragraph>
+</section>

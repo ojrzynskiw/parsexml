@@ -1,0 +1,12 @@
+<ng-container *ngIf="isArray()">
+  <section *ngFor='let part of parts'>
+    <h4>{{part["Tytul.Bogaty"]}}</h4>
+    <app-book-paragraph [paragraphs]='part["Srodpodtytul1.Tresc"]["Par"]'></app-book-paragraph>
+  </section>
+</ng-container>
+<ng-container *ngIf="!isArray()">
+  <section>
+    <h4>{{parts["Tytul.Bogaty"]}}</h4>
+    <app-book-paragraph [paragraphs]='parts["Srodpodtytul1.Tresc"]["Par"]'></app-book-paragraph>
+  </section>
+</ng-container>

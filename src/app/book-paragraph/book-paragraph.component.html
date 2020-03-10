@@ -1,0 +1,15 @@
+<ng-container *ngIf="paragraphs">
+  <details>
+    <summary>content</summary>
+    <ng-container *ngIf="isArray()">
+      <p *ngFor='let par of paragraphs'>
+        <ng-container *ngFor='let txt of par["#text"]'>{{txt}}</ng-container>
+      </p>
+    </ng-container>
+    <ng-container *ngIf="!isArray()">
+      <p>
+        <ng-container *ngFor='let txt of paragraphs["#text"]'>{{txt}}</ng-container>
+      </p>
+    </ng-container>
+  </details>
+</ng-container>
